@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Спасибо за ответ</title>
+  <style>
+    :root {
+      --text: #5c544c;
+      --muted: #8a8072;
+      --line: rgba(186, 176, 148, 0.58);
+      --shadow: 0 18px 44px rgba(116, 107, 86, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: "Palatino Linotype", "Book Antiqua", Georgia, serif;
+      color: var(--text);
+      background:
+        linear-gradient(rgba(252, 250, 246, 0.8), rgba(248, 244, 237, 0.84)),
+        url('floral-source.jpg') center center / cover no-repeat fixed;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+    }
+
+    .card {
+      width: min(720px, 100%);
+      padding: 44px 28px 30px;
+      text-align: center;
+      background: rgba(255, 253, 249, 0.9);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: 16px;
+      border: 1.2px solid rgba(178, 167, 135, 0.92);
+      clip-path: polygon(8% 0, 100% 0, 100% 86%, 92% 100%, 0 100%, 0 14%);
+      pointer-events: none;
+    }
+
+    .card > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 5vw, 54px);
+      line-height: 1.05;
+      letter-spacing: 0.05em;
+      font-weight: 400;
+      color: #62706a;
+      margin-bottom: 12px;
+    }
+
+    p {
+      max-width: 520px;
+      margin: 0 auto 18px;
+      font-size: clamp(18px, 2vw, 22px);
+      color: #756d62;
+      line-height: 1.5;
+    }
+
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 48px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(166, 153, 125, 0.5);
+      text-decoration: none;
+      font-size: 17px;
+      color: #fffdf9;
+      background: linear-gradient(135deg, #8d856d, #68716d);
+      box-shadow: 0 12px 24px rgba(104, 113, 109, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="eyebrow">Спасибо за ответ</div>
+    <h1>Мы получили вашу анкету</h1>
+    <p>Благодарим, что нашли время ответить. Нам очень приятно, что вы разделите с нами этот день.</p>
+    <a class="button" href="./index.html">Вернуться к приглашению</a>
+  </main>
+</body>
+</html>
